@@ -1,0 +1,9 @@
+# Parameters for model settings
+binary_class: False
+image_dimensions: 256, 256 # For downsampling (128,128)
+Nfilter_start: 32
+depth: 3
+
+# Parameters for local training
+batch_size: 8
+epochs: 1

@@ -1,0 +1,7 @@
+entry_points:
+  predict:
+    command: /venv/bin/python predict.py
+  train:
+    command: /venv/bin/python train.py
+  validate:
+    command: /venv/bin/python validate.py
