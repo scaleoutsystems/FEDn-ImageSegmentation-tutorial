@@ -34,14 +34,14 @@ if __name__ == '__main__':
         os.makedirs(os.path.join('data/datapartitions', str(i), 'validation_set'))
     for p in data_ids:
 
-        print("p: ", p)
+        #print("p: ", p)
         subject = int(p.split("/")[-1].split("_")[1])
-        print("subject: ", subject)
+        #print("subject: ", subject)
 
         if subject <= subjects_per_client * nr_of_clients:
             dp = np.where(subject <= split_points)[0][0]
 
-            if (subject - 1) % subjects_per_client == training_subjects_per_client:
+            if (subject - 1) % subjects_per_client >= training_subjects_per_client:
 
                 shutil.copy2(os.path.join(path, p), os.path.join('data/datapartitions', str(dp), 'validation_set') )
 
