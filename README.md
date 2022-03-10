@@ -15,14 +15,8 @@ mkdir data
 ```
 python create_data_partitions.py [NR_OF_CLIENTS] [TRAINING_SUBJECTS_PER_CLIENTS] [VALIDATION_SUBJECTS_PER_CLIENTS]
 ```
-Constrains: \[NR_OF_CLIENTS] **x** **(** \[TRAINING_SUBJECTS_PER_CLIENTS] **+** \[VALIDATION_SUBJECTS_PER_CLIENTS] **)** **$\leq$** 369
+Constrains: \[NR_OF_CLIENTS] **x** **(** \[TRAINING_SUBJECTS_PER_CLIENTS] **+** \[VALIDATION_SUBJECTS_PER_CLIENTS] **)** **<=** 369
 
-- $x + y$
-- $x - y$
-- $x \times y$ 
-- $x \div y$
-- $\dfrac{x}{y}$
-- $\sqrt{x}$
 
 ## Setting up pseudo deployment
 
