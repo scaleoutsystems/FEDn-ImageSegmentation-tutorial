@@ -23,7 +23,7 @@ Constrains: \[NR_OF_CLIENTS] **x** **(** \[TRAINING_SUBJECTS_PER_CLIENTS] **+** 
 ```
 git clone https://github.com/scaleoutsystems/fedn.git
 ```
-(use dev branch for now)
+(use develop branch)
 - Follow the instructions on the README.md for how to set up the base, reducer and combiner container.
 (For the moment use these commands to set up the Reducer and Combiner:)
 ```
