@@ -12,6 +12,7 @@ ARG REQUIREMENTS=requirements.txt
 #COPY config/settings-combiner.yaml.template /app/config/settings-combiner.yaml
 #COPY config/settings-reducer.yaml.template /app/config/settings-reducer.yaml
 COPY $REQUIREMENTS /app/config/requirements.txt
+RUN git config --global url."https://".insteadOf git://
 
 # Create FEDn app directory
 RUN mkdir -p /app \
