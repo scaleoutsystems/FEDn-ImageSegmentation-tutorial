@@ -30,6 +30,13 @@ In this tutorial we will build a pseudo distribution i.e. a federation on a sing
 ```
 git clone -b develop https://github.com/scaleoutsystems/fedn.git
 ```
+BUGFIX: 
+Go to fedn/config/base-services.yaml and replace line 6 to:
+```
+    image: minio/minio:14128-5ee91dc
+```
+
+
 For a detailed description visit: https://scaleoutsystems.github.io/fedn/deployment.html
 To set up the Base, Reducer and Combiner:
 ### Base Container
