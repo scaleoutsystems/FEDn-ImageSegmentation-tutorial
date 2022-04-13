@@ -1,14 +1,17 @@
 # FEDn-ImageSegmentation-tutorial
 
 This is an example tutorial for how to set up and train a Image segmentation model in a federated setting using FEDn. 
-Dataset using for this example: Brats2020
-Model: U-net implemented in keras.
+- Dataset using for this example: Brats2020
+- Model: U-net implemented in keras.
 
 ## Pre configuration
 *Requirements: Python with numpy*
 
-- Clone this repo.
-- Create a data folder inside of this repo:
+- Clone this repo:
+```
+git clone https://github.com/scaleoutsystems/FEDn-ImageSegmentation-tutorial.git
+```
+- Create a data folder inside of the FEDn-ImageSegmentation-tutorial repo folder:
 ```
 mkdir data
 ```
@@ -21,6 +24,7 @@ Constrains: \[NR_OF_CLIENTS] **x** **(** \[TRAINING_SUBJECTS_PER_CLIENTS] **+** 
 
 
 ## Setting up pseudo deployment
+In this tutorial we will build a pseudo distribution i.e. a federation on a single network.
 
 - clone the FEDn repo:
 ```
@@ -35,14 +39,16 @@ docker network create fedn_default
 docker-compose -f config/base-services.yaml up
 ```
 ### Reducer Container
-Open a new terminal and navigate to the fedn repository folder and type:
+Open a new terminal and navigate to the fedn repository folder.
 Copy the file “config/settings-reducer.yaml.template” to “config/settings-reducer.yaml”.
+Start the container:
 ```
 docker-compose -f config/reducer-dev.yaml -f config/private-network.yaml up 
 ```
 ### Combiner Container
-Open a new terminal and navigate to the fedn repository folder and type:
+Open a new terminal and navigate to the fedn repository folder.
 Copy ‘config/settings.yaml.template’ to ‘config/settings-combiner.yaml’.
+Start the container:
 ```
 docker-compose -f config/combiner-dev.yaml -f config/private-network.yaml up 
 ```
@@ -72,6 +78,7 @@ Here can you set:
 - Then go to the minio UI: https://localhost:9001
 - the default login is username: fedn_admin, password: password (but you can change it in the fedn-repo under config/base-services.yaml, line 12-13)
 - go to fedn-models -> Browse and download the model weights with the desired id.
+
 To use the model for local inference, you could look at the notebook: SOON TO BE ADDED!
 
 # Details
